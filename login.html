@@ -12,6 +12,12 @@
   <input type="password" placeholder="Password"><br><br>
   <button class="btn">Continue</button>
 </section>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const supabaseUrl = "https://YOUR_PROJECT_ID.supabase.co";
+const supabaseKey = "YOUR_PUBLIC_ANON_KEY";
+const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+</script>
 
 </body>
 </html>
