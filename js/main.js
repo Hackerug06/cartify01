@@ -1,20 +1,20 @@
-const products = [
-  { id: 1, name: "Smartphone", price: 1200000, image: "assets/images/phone.png" },
-  { id: 2, name: "Headphones", price: 150000, image: "assets/images/headphones.png" },
-  { id: 3, name: "Sneakers", price: 180000, image: "assets/images/shoes.png" }
-];
+async function loadProducts() {
+  const { data, error } = await supabase
+    .from("products")
+    .select("*");
 
-const productList = document.getElementById("product-list");
+  const productList = document.getElementById("product-list");
+  productList.innerHTML = "";
 
-if (productList) {
-  products.forEach(p => {
+  data.forEach(p => {
     productList.innerHTML += `
       <div class="product">
-        <img src="${p.image}" alt="">
+        <img src="${p.image}">
         <h4>${p.name}</h4>
         <p>UGX ${p.price}</p>
-        <button onclick="addToCart(${p.id})">Add to Cart</button>
+        <button onclick="addToCart('${p.id}')">Add to Cart</button>
       </div>
     `;
   });
 }
+loadProducts();
