@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cartify | Shop Smart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">Cartify</div>
+
+  <input type="text" placeholder="Search products..." class="search">
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="#categories">Categories</a>
+    <a href="#">Deals</a>
+    <a href="#">About</a>
+  </nav>
+
+  <div class="icons">
+    <a href="cart.html">🛒 <span id="cart-count">0</span></a>
+    <a href="login.html">👤</a>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Cartify – Shop Smart. Shop Everything.</h1>
+  <p>Electronics, fashion, groceries & more in one place</p>
+  <a href="shop.html" class="btn">Shop Now</a>
+</section>
+
+<section id="categories" class="categories">
+  <h2>Categories</h2>
+  <div class="category-grid">
+    <div class="cat">📱 Electronics</div>
+    <div class="cat">👗 Fashion</div>
+    <div class="cat">🥦 Groceries</div>
+    <div class="cat">🏠 Home</div>
+    <div class="cat">💄 Beauty</div>
+    <div class="cat">🎧 Accessories</div>
+  </div>
+</section>
+
+<section class="products">
+  <h2>Featured Products</h2>
+  <div class="product-grid" id="product-list"></div>
+</section>
+
+<footer>
+  <p>© 2026 Cartify. All rights reserved.</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>
